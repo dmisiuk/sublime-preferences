@@ -1,0 +1,23 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"BracketHighlighter",
+		"Clojure Sublimed",
+		"EDN",
+		"Elixir",
+		"Emacs Pro Essentials",
+		"JsFormat",
+		"LSP",
+		"Package Control",
+		"paredit",
+		"Pretty JSON",
+		"RainbowBrackets",
+		"Strapdown Markdown Preview",
+		"SublimeLinter",
+		"SublimeLinter-contrib-clj-kondo",
+	],
+}
