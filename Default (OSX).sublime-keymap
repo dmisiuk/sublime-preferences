@@ -1,51 +1,252 @@
 [
-
- {"keys": ["ctrl+enter"],
-  "command": "clojure_sublimed_eval",
- "context": [{"key": "selector", "operator": "equal", "operand": "source.clojure"}]}
-
-
-
-,{
-  "keys": ["ctrl+0"],
-  "command": "paredit_forward_slurp_sexp",
-  "context": [{"key": "should_paredit"}]
- }
-,{
-  "keys": ["ctrl+super+0"],
-  "command": "paredit_forward_barf_sexp",
-  "context": [{"key": "should_paredit"}]
- }
-,{
-  "keys": ["ctrl+9"],
-  "command": "paredit_backward_slurp_sexp",
-  "context": [{"key": "should_paredit"}]
- }
-,{
-  "keys": ["ctrl+super+9"],
-  "command": "paredit_backward_barf_sexp",
-  "context": [{"key": "should_paredit"}]
- },
-  { "keys": ["ctrl+,"]},
-  {
-        "keys": ["ctrl+."],
-        "command": "lsp_symbol_definition",
-        "args": {"side_by_side": false, "force_group": true, "fallback": false, "group": -1},
-        "context": [
-            {"key": "lsp.session_with_capability", "operand": "definitionProvider"},
-            {"key": "auto_complete_visible", "operand": false}
+    {
+        "keys":
+        [
+            "ctrl+enter"
+        ],
+        "command": "clojure_sublimed_eval",
+        "context":
+        [
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "source.clojure"
+            }
         ]
     },
-{ "keys": ["ctrl+,"], "command": "jump_back" },
-
     {
-        "keys": ["ctrl+i"],
-        "command": "lsp_hover",
-        "context": [{"key": "lsp.session_with_capability", "operand": "hoverProvider"}]
+        "keys":
+        [
+            "ctrl+0"
+        ],
+        "command": "paredit_forward_slurp_sexp",
+        "context":
+        [
+            {
+                "key": "should_paredit"
+            }
+        ]
     },
+    {
+        "keys":
+        [
+            "ctrl+super+0"
+        ],
+        "command": "paredit_forward_barf_sexp",
+        "context":
+        [
+            {
+                "key": "should_paredit"
+            }
+        ]
+    },
+    {
+        "keys":
+        [
+            "ctrl+9"
+        ],
+        "command": "paredit_backward_slurp_sexp",
+        "context":
+        [
+            {
+                "key": "should_paredit"
+            }
+        ]
+    },
+    {
+        "keys":
+        [
+            "ctrl+super+9"
+        ],
+        "command": "paredit_backward_barf_sexp",
+        "context":
+        [
+            {
+                "key": "should_paredit"
+            }
+        ]
+    },
+    {
+        "keys":
+        [
+            "ctrl+,"
+        ]
+    },
+    {
+        "keys":
+        [
+            "ctrl+."
+        ],
+        "command": "lsp_symbol_definition",
+        "args":
         {
-        "keys": ["ctrl+s"],
-        "command": "lsp_signature_help_show",
-        "context": [{"key": "lsp.signature_help_available"}]
+            "side_by_side": false,
+            "force_group": true,
+            "fallback": false,
+            "group": -1
+        },
+        "context":
+        [
+            {
+                "key": "lsp.session_with_capability",
+                "operand": "definitionProvider"
+            },
+            {
+                "key": "auto_complete_visible",
+                "operand": false
+            }
+        ]
     },
+    {
+        "keys":
+        [
+            "ctrl+,"
+        ],
+        "command": "jump_back"
+    },
+    {
+        "keys":
+        [
+            "ctrl+super+i"
+        ],
+        "command": "lsp_hover",
+        "context":
+        [
+            {
+                "key": "lsp.session_with_capability",
+                "operand": "hoverProvider"
+            }
+        ]
+    },
+    {
+        "keys":
+        [
+            "ctrl+i"
+        ],
+        "command": "lsp_signature_help_show",
+        "context":
+        [
+            {
+                "key": "lsp.signature_help_available"
+            }
+        ]
+    },
+    {
+        "keys":
+        [
+            "ctrl+k"
+        ],
+        "command": "paredit_kill",
+        "context":
+        [
+            {
+                "key": "should_paredit"
+            }
+        ]
+    },
+    {
+        "keys":
+        [
+            "super+c"
+        ],
+        "command": "sbp_kill_region",
+        "args":
+        {
+            "is_copy": true
+        },
+        "context":
+        [
+            {
+                "key": "sbp_use_super_bindings"
+            }
+        ]
+    },
+    {
+        "keys":
+        [
+            "super+v"
+        ],
+        "command": "sbp_yank"
+    },
+    {
+        "keys":
+        [
+            "ctrl+r",
+            "ctrl+r"
+        ],
+        "command": "golang_build",
+        "args":
+        {
+            "task": "run",
+            "flags":
+            [
+                "-x"
+            ]
+        }
+    },
+    {
+        "keys":
+        [
+            "ctrl+enter"
+        ],
+        "command": "golang_build",
+        "args":
+        {
+            "task": "run",
+            "flags":
+            [
+                "-x"
+            ]
+        },
+        "context":
+        [
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "source.go"
+            }
+        ]
+    },
+    {
+        "keys":
+        [
+            "ctrl+t"
+        ],
+        "command": "golang_build",
+        "args":
+        {
+            "task": "test",
+            "flags":
+            [
+                "-x"
+            ]
+        },
+        "context":
+        [
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "source.go"
+            }
+        ]
+    },
+    {
+        "keys":
+        [
+            "ctrl+t"
+        ],
+        "command": "clojure_sublimed_eval_code",
+        "args":
+        {
+            "code": "(clojure.test/run-all-tests)"
+        },
+        "context":
+        [
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "source.clojure"
+            }
+        ]
+    }
 ]
